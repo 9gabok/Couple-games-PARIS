@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chasse à l'Objet Ultime (50 Défis) - Paris Ciblée</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #6c757d; 
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #6c757d;
+            font-size: 2em;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .challenges, .scores {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .challenges {
+            flex: 2;
+            min-width: 450px;
+        }
+        .scores {
+            flex: 1;
+            min-width: 300px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .challenge-list {
+            list-style: none;
+            padding: 0;
+        }
+        .challenge-list li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #eee;
+        }
+        .challenge-list li:last-child {
+            border-bottom: none;
+        }
+        .zone-header {
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 8px 10px;
+            margin: 15px 0 5px 0;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .fun-challenge {
+            color: #17a2b8; /* Couleur pour les défis fun */
+        }
+
+        /* Score Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #6c757d;
+            color: white;
+            text-transform: uppercase;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .map-container {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Bouton de téléchargement */
+        #download-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #download-btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🏆 50 Défis d'Observation Ultime à Paris ! 🥳</h1>
+        <p>Les 30 défis initiaux + 20 défis "Fun" pour le plaisir de l'observation.</p>
+    </header>
+
+    <div class="container">
+        <div class="challenges">
+            <h2>🔎 Liste des Objets à Trouver (50)</h2>
+            <ul class="challenge-list">
+                
+                <li class="zone-header">1. 🇫🇷 Quartier Latin & Île de la Cité (L'Académique et l'Ancien)</li>
+                <li>**A1.** Un **"H" de l'ancien Hôpital** inscrit en relief sur une façade.</li>
+                <li>**A2.** Une **plaque de rue émaillée (bleue)** portant le nom d'un personnage historique féminin.</li>
+                <li>**B1.** Une **fenêtre en forme de livre ouvert** sur la façade d'une librairie ou ancienne école.</li>
+                <li>**B2.** Une **pompe à eau publique (Fontaine Wallace)** surmontée de ses quatre cariatides.</li>
+                <li>**B3.** Une **chaîne de trottoir en fonte** encore visible, délimitant un espace piéton.</li>
+                <li>**B4.** Un **panneau de "sens interdit"** masqué à moitié par de la végétation.</li>
+                <li class="fun-challenge">**F1.** Un **livre** dont le titre contient le mot "Amour".</li>
+                <li class="fun-challenge">**F2.** Une **plante** qui pousse sur un toit ou dans une gouttière.</li>
+                <li class="fun-challenge">**F3.** Une affiche ou un tableau avec un **chat** (dans une fenêtre ou une boutique).</li>
+                <li class="fun-challenge">**F4.** Un **scooter** dont le casque est attaché à l'extérieur.</li>
+
+                <li class="zone-header">2. 🛍️ Grands Boulevards & Opéra (Le Consommable et le Kitsch)</li>
+                <li>**A3.** Une **affiche de théâtre/spectacle** dont le titre est entièrement en capitales **et** qui est déchirée.</li>
+                <li>**A4.** Un **panier de plage en osier** exposé dans une vitrine de prêt-à-porter de luxe.</li>
+                <li>**D1.** Une **baguette de pain traditionnelle** qui mesure visiblement moins de 55 cm.</li>
+                <li>**D2.** Un **extincteur rouge** dans une boutique, dont la date de vérification est expirée (si visible).</li>
+                <li>**D3.** Un **fruit ou légume présenté seul** (sans autres de la même espèce) dans une boutique de luxe.</li>
+                <li>**D6.** Un **mannequin portant des lunettes de soleil** à l'intérieur d'un magasin.</li>
+                <li class="fun-challenge">**F5.** Une **publicité de parfum** où le modèle a les yeux fermés.</li>
+                <li class="fun-challenge">**F6.** Une personne portant à la fois des **sandales et des chaussettes**.</li>
+                <li class="fun-challenge">**F7.** Une part de **pizza** dont le pepperoni (ou jambon) est tombé sur le carton/assiette.</li>
+                <li class="fun-challenge">**F8.** Une **étiquette de prix** se terminant par **,99 €** et qui est **barrée**.</li>
+
+                <li class="zone-header">3. 🏞️ Quais de Seine & Les Jardins (Le Naturel et le Vagabond)</li>
+                <li>**A5.** Un **pigeon buvant de l'eau d'une flaque** ou d'une fontaine (preuve d'un contact avec l'eau).</li>
+                <li>**C3.** Un **bateau-mouche/péniche** dont le nom est un prénom féminin.</li>
+                <li>**C4.** Un **cadenas d'amour** laissé sur un pont portant l'inscription d'un nom de ville étrangère.</li>
+                <li>**C5.** Une **feuille d'arbre rouge vif** tombée sur un livre d'occasion chez un bouquiniste.</li>
+                <li>**E2.** Un **banc public vert** dont l'une des lattes est cassée ou manquante.</li>
+                <li>**E4.** Une **morsure de chien** visible sur le bas d'un poteau en bois ou d'une poubelle. </li>
+                <li class="fun-challenge">**F9.** Un **chien** tenu en laisse qui porte un vêtement.</li>
+                <li class="fun-challenge">**F10.** Un **objet non comestible** (jouet, caillou) flottant dans une fontaine.</li>
+                <li class="fun-challenge">**F11.** Une **écorce d'arbre** qui ressemble clairement à un visage humain.</li>
+                <li class="fun-challenge">**F12.** Une **canette de boisson énergétique** laissée sur un banc public.</li>
+
+                <li class="zone-header">4. 🏘️ Montmartre & Buttes-Chaumont (L'Artisanat et l'Insoumis)</li>
+                <li>**A6.** Un **vieux panneau de signalisation en métal** (pas en plastique) indiquant une rue, fixé très haut sur un mur.</li>
+                <li>**B5.** Un **escalier public en pierre** (pas en bois ou métal) dont le nombre de marches est impair.</li>
+                <li>**B6.** Une **gargouille ou une sculpture animale** sur une façade qui n'est pas une église.</li>
+                <li>**D4.** Une **craie de couleur** (rouge, jaune, bleu...) laissée sur le trottoir par un artiste de rue.</li>
+                <li>**D5.** Un **portrait caricatural** d'un célèbre personnage politique français exposé en vitrine d'une galerie.</li>
+                <li>**E5.** Une **boîte aux lettres de La Poste** dont le système d'ouverture est visiblement cassé ou tordu.</li>
+                <li class="fun-challenge">**F13.** Un **artiste de rue** en train de dessiner un pigeon ou un chien.</li>
+                <li class="fun-challenge">**F14.** Une paire de **chaussures de randonnée** suspendues ou oubliées quelque part.</li>
+                <li class="fun-challenge">**F15.** Une **boîte aux lettres** avec un numéro d'appartement ou un nom écrit au Tipp-Ex.</li>
+                <li class="fun-challenge">**F16.** Un **panneau d'interdiction de stationner** complètement recouvert d'autocollants.</li>
+
+                <li class="zone-header">5. ⚙️ Les Quartiers du 10ème/11ème Arrondissement (Le Populaire et le Décalé)</li>
+                <li>**C1.** Un **vélo dont les deux pneus sont crevés** (preuve visible : pneus à plat) attaché à un poteau.</li>
+                <li>**C2.** Un **ticket de métro perforé** (ancienne génération) sur le sol.</li>
+                <li>**C6.** Une **voiture** portant au moins 3 traces d'éraflures ou de chocs distincts.</li>
+                <li>**E1.** Le **haut d'un arbre coupé** (la souche) utilisé comme support pour un cendrier improvisé.</li>
+                <li>**E3.** Une **"porte magique"** : une petite porte de service sans poignée ni fenêtre, peinte de la même couleur que le mur.</li>
+                <li>**E6.** Une **feuille de papier "Recherche chat perdu"** affichée sur un panneau d'affichage.</li>
+                <li class="fun-challenge">**F17.** Un **rétroviseur de voiture** où l'on voit clairement un objet amusant accroché (désodorisant, bibelot, etc.).</li>
+                <li class="fun-challenge">**F18.** Une annonce **"cherche colocataire"** affichée sur un tableau ou une porte.</li>
+                <li class="fun-challenge">**F19.** Un **jouet d'enfant** (pas cassé) laissé seul sur un trottoir.</li>
+                <li class="fun-challenge">**F20.** Une personne en terrasse mangeant des **frites avec des couverts**.</li>
+            </ul>
+        </div>
+
+        <div class="scores">
+            <h2>📝 Tableau des Scores</h2>
+            <table id="score-table">
+                <thead>
+                    <tr>
+                        <th>Défi</th>
+                        <th>Vous</th>
+                        <th>Votre Copine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Total</th>
+                        <th id="total-moi">0</th>
+                        <th id="total-copine">0</th>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="download-btn" onclick="downloadScores()">Télécharger les Scores (TXT)</button>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <h2>🗺️ Zone de Recherche Ciblée</h2>
+        <p>La zone délimitée couvre les arrondissements centraux et limitrophes (50 défis à chercher !).</p>
+        <div id="map"></div>
+    </div>
+
+    <script>
+        // Variables globales pour stocker les totaux de score
+        let currentScoreMoi = 0;
+        let currentScoreCopine = 0;
+
+        // Liste des IDs de défis (MAJ à 50)
+        const challengeIds = [
+            'A1', 'A2', 'B1', 'B2', 'B3', 'B4', 'F1', 'F2', 'F3', 'F4',
+            'A3', 'A4', 'D1', 'D2', 'D3', 'D6', 'F5', 'F6', 'F7', 'F8',
+            'A5', 'C3', 'C4', 'C5', 'E2', 'E4', 'F9', 'F10', 'F11', 'F12',
+            'A6', 'B5', 'B6', 'D4', 'D5', 'E5', 'F13', 'F14', 'F15', 'F16',
+            'C1', 'C2', 'C6', 'E1', 'E3', 'E6', 'F17', 'F18', 'F19', 'F20'
+        ];
+
+        const scoreTableBody = document.querySelector('#score-table tbody');
+        const totalMoi = document.getElementById('total-moi');
+        const totalCopine = document.getElementById('total-copine');
+
+        // Générer les lignes du tableau de score
+        challengeIds.forEach(id => {
+            const row = scoreTableBody.insertRow();
+            row.innerHTML = `
+                <td>${id}</td>
+                <td><input type="checkbox" data-joueur="moi" data-id="${id}" onchange="calculateScore()"></td>
+                <td><input type="checkbox" data-joueur="copine" data-id="${id}" onchange="calculateScore()"></td>
+            `;
+        });
+
+        // Fonction pour calculer les scores
+        function calculateScore() {
+            const checkboxesMoi = document.querySelectorAll('input[data-joueur="moi"]:checked');
+            const checkboxesCopine = document.querySelectorAll('input[data-joueur="copine"]:checked');
+
+            currentScoreMoi = checkboxesMoi.length;
+            currentScoreCopine = checkboxesCopine.length;
+
+            totalMoi.textContent = currentScoreMoi;
+            totalCopine.textContent = currentScoreCopine;
+        }
+
+        // --- Fonction pour télécharger les scores ---
+        function downloadScores() {
+            const date = new Date().toLocaleDateString('fr-FR');
+            let content = `--- RESULTATS CHASSE A L'OBJET ULTIME PARIS (50 défis) ---\n`;
+            content += `Date de la partie : ${date}\n\n`;
+            
+            // Récupérer le contenu détaillé du tableau
+            const table = document.getElementById('score-table');
+            content += 'Défi\tVous\tVotre Copine\n';
+            
+            // Lignes de score (Détail)
+            const rows = table.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                const id = row.querySelector('td').textContent;
+                const checkMoi = row.querySelector('input[data-joueur="moi"]').checked ? 'X' : '';
+                const checkCopine = row.querySelector('input[data-joueur="copine"]').checked ? 'X' : '';
+                content += `${id}\t${checkMoi}\t${checkCopine}\n`;
+            });
+            
+            // Totaux
+            content += `\n--- TOTAUX ---\n`;
+            content += `Total trouvé par VOUS : ${currentScoreMoi} / ${challengeIds.length}\n`;
+            content += `Total trouvé par VOTRE COPINE : ${currentScoreCopine} / ${challengeIds.length}\n\n`;
+
+            if (currentScoreMoi > currentScoreCopine) {
+                content += `FÉLICITATIONS ! VOUS avez gagné la partie (${currentScoreMoi} à ${currentScoreCopine}) !\n`;
+            } else if (currentScoreCopine > currentScoreMoi) {
+                content += `FÉLICITATIONS ! VOTRE COPINE a gagné la partie (${currentScoreCopine} à ${currentScoreMoi}) !\n`;
+            } else {
+                content += `ÉGALITÉ ! Quel beau travail d'équipe (${currentScoreMoi} partout) !\n`;
+            }
+
+            // Créer le fichier Blob et le lien de téléchargement
+            const filename = `Scores_Chasse_Ultimate_Paris_${date.replace(/\//g, '-')}.txt`;
+            const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+            
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+        
+        // --- Configuration de Google Maps ---
+        function initMap() {
+            const parisCenter = { lat: 48.86, lng: 2.34 }; 
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12, 
+                center: parisCenter,
+                gestureHandling: "cooperative"
+            });
+
+            const areaCoords = [
+                { lat: 48.885, lng: 2.30 },
+                { lat: 48.90, lng: 2.35 },
+                { lat: 48.885, lng: 2.39 },
+                { lat: 48.85, lng: 2.40 },
+                { lat: 48.835, lng: 2.38 },
+                { lat: 48.82, lng: 2.32 },
+                { lat: 48.84, lng: 2.27 },
+                { lat: 48.885, lng: 2.30 }
+            ];
+
+            const searchPolygon = new google.maps.Polygon({
+                paths: areaCoords,
+                strokeColor: "#6c757d",
+                strokeOpacity: 0.8,
+                strokeWeight: 2,
+                fillColor: "#6c757d",
+                fillOpacity: 0.15,
+            });
+
+            searchPolygon.setMap(map);
+            
+            new google.maps.Marker({
+                position: parisCenter,
+                map: map,
+                title: "Paris Central (Zone de la Chasse)"
+            });
+        }
+    </script>
+    
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=VOTRE_CLE_API_GOOGLE_MAPS&callback=initMap">
+    </script>
+</body>
+</html>
