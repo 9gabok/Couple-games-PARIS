@@ -1,0 +1,181 @@
+/* ======= Reset & font ======= */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: #fff;
+  background-image:
+    linear-gradient(#f6f6f6 1px, transparent 1px),
+    linear-gradient(to right, #f6f6f6 1px, #fff 1px);
+  background-size: 20px 20px;
+  color: #4a4a4a;
+}
+
+a {
+  font-weight: 600;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #FE4183;
+}
+
+header {
+  background: transparent;
+  padding: 1.5rem 0 0.5rem 0;
+  text-align: center;
+  border-bottom: none;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+nav {
+  margin-bottom: 1.5rem;
+}
+
+nav a {
+  margin: 0 15px;
+  font-weight: 600;
+  color: #4a4a4a;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+nav a:hover {
+  color: #FE4183;
+}
+
+main.grid-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+section.card {
+  background: white;
+  border-radius: 20px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+  color: #333;
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(254, 65, 131, 0.3);
+}
+
+/* Avatar section */
+.badge {
+  text-align: center;
+  color: #333;
+  background: #fef1f7;
+}
+.badge .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #FE4183;
+  margin: 0.75rem auto 1rem auto;
+  display: block;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+.badge .avatar:hover {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* Colored cards */
+.pink {
+  background: #FE4183;
+  color: white;
+}
+.blue {
+  background: #4EBAFF;
+  color: white;
+}
+.green {
+  background: #5BECB1;
+  color: #000;
+}
+.purple {
+  background: #AB47BC;
+  color: white;
+}
+.cyan {
+  background: #00BCD4;
+  color: #000;
+}
+.yellow {
+  background: #FFCA28;
+  color: #000;
+}
+.orange {
+  background: #FF7043;
+  color: white;
+}
+.black {
+  background: #333;
+  color: white;
+}
+
+ul {
+  padding-left: 20px;
+  margin-top: 0;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.socials {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.socials a {
+  color: white;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.socials a:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  main.grid-container {
+    padding: 1rem;
+  }
+  section.card {
+    min-height: auto;
+  }
+}
+
+/* Dynamic emoji animation */
+.emoji-dynamic {
+  display: inline-block;
+  animation: bounce 1.5s infinite alternate;
+  font-size: 1.3rem;
+  margin-left: 6px;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
+}
